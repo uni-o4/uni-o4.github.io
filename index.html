@@ -2,10 +2,10 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <meta name="description" content="Deep Whole-Body Control: Learning a Unified Policy for Manipulation and Locomotion">
+  <meta name="description" content="Uni-O4: Unifying Online and Offline Deep Reinforcement Learning with Multi-Step On-Policy Optimization">
   <meta name="keywords" content="Mobile Manipulation, Legged Locomotion, Whole-Body Control, Reinforcement Learning">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Deep Whole-Body Control: Learning a Unified Policy for Manipulation and Locomotion</title>
+  <title>Uni-O4: Unifying Online and Offline Deep Reinforcement Learning with Multi-Step On-Policy Optimization</title>
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
         rel="stylesheet">
@@ -26,9 +26,9 @@
 
   <link rel="icon" href="./favicon.ico">
 
-  <meta property="og:site_name" content="Deep Whole-Body Control: Learning a Unified Policy for Manipulation and Locomotion" />
+  <meta property="og:site_name" content="Uni-O4: Unifying Online and Offline Deep Reinforcement Learning with Multi-Step On-Policy Optimization" />
   <meta property="og:type" content="video.other" />
-  <meta property="og:title" content="Deep Whole-Body Control: Learning a Unified Policy for Manipulation and Locomotion" />
+  <!-- <meta property="og:title" content="Uni-O4: Unifying Online and Offline Deep Reinforcement Learning with Multi-Step On-Policy Optimization" />
   <meta property="og:description" content="by Zipeng Fu, Xuxin Cheng, Deepak Pathak" />
   <meta property="og:url" content="https://manipulation-locomotion.github.io/" />
   <meta property="og:image" content="https://manipulation-locomotion.github.io/static/images/preview.gif" />
@@ -39,18 +39,18 @@
   <meta property="og:image:height" content="720" />
 
   <meta property="article:publisher" content="https://zipengfu.github.io" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Deep Whole-Body Control: Learning a Unified Policy for Manipulation and Locomotion" />
+  <meta name="twitter:card" content="summary_large_image" /> -->
+  <!-- <meta name="twitter:title" content="Uni-O4: Unifying Online and Offline Deep Reinforcement Learning with Multi-Step On-Policy Optimization" />
   <meta name="twitter:description" content="by Zipeng Fu, Xuxin Cheng, Deepak Pathak" />
   <meta name="twitter:url" content="https://manipulation-locomotion.github.io/" />
   <meta name="twitter:image" content="https://manipulation-locomotion.github.io/static/images/preview.gif" />
   <meta name="twitter:site" content="@zipengfu" />
   <meta name="twitter:card" content="player" />
-  <meta name="twitter:player" content="https://www.youtube.com/embed/4-2j3L86ZL4" />
+  <meta name="twitter:player" content="https://www.youtube.com/embed/4-2j3L86ZL4" /> -->
   <meta name="twitter:player:width" content="1280" />
   <meta name="twitter:player:height" content="720" />
 
-  <script src="https://www.youtube.com/iframe_api"></script>
+  <!-- <script src="https://www.youtube.com/iframe_api"></script> -->
 </head>
 
 
@@ -61,21 +61,21 @@
     <div class="container">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Deep Whole-Body Control: Learning a Unified Policy for Manipulation and Locomotion</h1>
+          <h1 class="title is-1 publication-title">Uni-O4: Unifying Online and Offline Deep Reinforcement Learning with Multi-Step On-Policy Optimization</h1>
           <div class="is-size-4 publication-authors">
-            <span class="author-block">
+            <!-- <span class="author-block">
               <a href="https://zipengfu.github.io/">Zipeng Fu</a><sup>*</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <a href="https://chengxuxin.github.io/">Xuxin Cheng</a><sup>*</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <a href="https://www.cs.cmu.edu/~dpathak/">Deepak Pathak</a>
               <br>Carnegie Mellon University
               <span class="brmod">CoRL 2022 (Oral)</span>
               <span><b style="color:rgb(255, 100, 100);">Best Systems Paper Award Finalist (top 0.79%)</b></span>
-            </span>
+            </span> -->
           </div>
 
           <div class="column has-text-centered">
             <div class="publication-links">
-              <!-- PDF Link. -->
+              PDF Link.
               <span class="link-block">
                 <a href="./resources/Deep-Whole-Body-Control.pdf"
                    class="external-link button is-normal is-rounded is-dark">
@@ -175,9 +175,9 @@
           </video>
       </div>
     </div>
-    <h2 class="subtitle has-text-centered">
+    <!-- <h2 class="subtitle has-text-centered">
       <strong>Whole-body control via a unified learned policy achieves agile and dynamic behaviors on our custom-built low-cost legged manipulator</strong>
-    </h2>
+    </h2> -->
   </div>
 </section>
 
@@ -189,20 +189,22 @@
         <h2 class="title is-2">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            An attached arm can significantly increase the applicability of legged robots to several mobile manipulation tasks that are not possible for the wheeled or tracked counterparts. The standard control pipeline for such legged manipulators is to decouple the controller into that of manipulation and locomotion. However, this is ineffective and requires immense engineering to support coordination between the arm and legs, error can propagate across modules causing non-smooth unnatural motions. It is also biological implausible where there is evidence for strong motor synergies across limbs. In this work, we propose to learn a unified policy for whole-body control of a legged manipulator using reinforcement learning. We propose Regularized Online Adaptation to bridge the Sim2Real gap for high-DoF control, and Advantage Mixing exploiting the causal dependency in the action space to overcome local minima during training the whole-body system. We also present a simple design for a low-cost legged manipulator, and find that our unified policy can demonstrate dynamic and agile behaviors across several task setups.           </p>
+            Combining offline and online reinforcement learning (RL) is crucial for efficient and safe learning. However, previous approaches treat offline and online learning as separate procedures, resulting in redundant designs and limited performance. We ask: Can we achieve straightforward yet effective offline and online learning without introducing extra conservatism or regularization?
+            In this study, we demonstrate that by employing on-policy RL algorithms, the fusion of these two paradigms can yield superior offline initialization as well as stable and rapid online fine-tuning capabilities. Our proposed method involves the optimization of the same on-policy objective in both offline and online learning, allowing for a seamless transition between the two phases while benefiting from the absence of distributional shift.
+            This property enhances the flexibility of the learning paradigm, allowing for arbitrary combinations of pretraining, fine-tuning, offline, and online learning. It remains applicable regardless of whether it involves simulation-based online pretraining followed by sim2real offline adaptation or offline-to-online fine-tuning. Through real-world robot tasks, we highlight the benefits of this paradigm for rapid deployment in challenging, previously unseen real-world environments. Additionally, through comprehensive evaluations using numerous simulated benchmarks, we substantiate that our method achieves state-of-the-art performance in both offline and offline-to-online fine-tuning learning.          </p>
         </div>
       </div>
     </div>
   </div>
 </section>
-
+<!-- 
 <section class="section">
   <div class="container">
     <div class="columns is-centered">
       <div class="column is-full-width is-centered has-text-centered">
         <h2 class="title is-2" style="text-align: center;" id="method-video" >Real-World Demos</h2>
         <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/t6NoCx_zitM" title="Deep Whole-Body Control: Learning a Unified Policy for Manipulation and Locomotion (CoRL 2022)"
+          <iframe src="https://www.youtube.com/embed/t6NoCx_zitM" title="Uni-O4: Unifying Online and Offline Deep Reinforcement Learning with Multi-Step On-Policy Optimization (CoRL 2022)"
                   frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
       </div>
@@ -215,9 +217,9 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
-
+<!-- 
 <section class="section">
   <div class="container">
     <h2 class="title is-2" style="text-align: center;">Teleoperation</h2>
@@ -247,7 +249,7 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
 <section class="section">
   <div class="container">
@@ -263,23 +265,23 @@
     </div>
     <div class="columns is-centered">
       <div class="column is-full-width is-centered has-text-centered">
-        <video controls autoplay loop muted playsinline src="./resources/visual-tracking/human-tracking.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
+        <video controls autoplay loop muted playsinline src="./video/Offline fine-tuned+Sim pretrained_720.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
       </div>
       <div class="column is-full-width is-centered has-text-centered">
-        <video controls autoplay loop muted playsinline src="./resources/visual-tracking/tag-tracking.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
+        <video controls autoplay loop muted playsinline src="./video/Online+IQL_720.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
       </div>
     </div>
     <div class="columns is-centered">
       <div class="column is-full-width is-centered has-text-centered">
-        <video controls autoplay loop muted playsinline src="./resources/visual-tracking/vis-easy.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
+        <video controls autoplay loop muted playsinline src="./video/Online+Offline fine-tuned_720.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
       </div>
       <div class="column is-full-width is-centered has-text-centered">
-        <video controls autoplay loop muted playsinline src="./resources/visual-tracking/vis-hard.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
+        <video controls autoplay loop muted playsinline src="./video/Online+Sim2Real_720.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
       </div>
     </div>
   </div>
 </section>
-
+<!-- 
 <section class="section">
   <div class="container">
     <h2 class="title is-2" style="text-align: center;">Demonstration Replay</h2>
@@ -337,12 +339,12 @@
     <h2 class="titile">BibTeX</h2>
     <pre><code>@inproceedings{fu2022deep,
   author    = {Fu, Zipeng and Cheng, Xuxin and Pathak, Deepak},
-  title     = {Deep Whole-Body Control: Learning a Unified Policy for Manipulation and Locomotion},
+  title     = {Uni-O4: Unifying Online and Offline Deep Reinforcement Learning with Multi-Step On-Policy Optimization},
   booktitle = {Conference on Robot Learning ({CoRL})},
   year      = {2022},
 }</code></pre>
   </div>
-</section>
+</section> -->
 
 <footer class="footer">
   <div class="container">
