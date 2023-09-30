@@ -24,6 +24,7 @@
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
   <link rel="icon" href="./favicon.ico">
 
   <meta property="og:site_name" content="Uni-O4: Unifying Online and Offline Deep Reinforcement Learning with Multi-Step On-Policy Optimization" />
@@ -112,7 +113,38 @@
     </div>
   </div>
 </section>
-
+  
+<section class="section">
+  <div class="container">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+        <div class="column has-text-centered">
+<!--       <div class="column is-two-thirds"> -->
+        <h2 class="title is-2">Method</h2>
+        <div class="content has-text-justified">
+          <p>
+                Owning to the alignment of objectives in offline and online phases, <span style="color: rgb(128, 185, 90);font-weight: bolder;">Uni-O4</span> Uni-O4 enables flexible combinations of pretraining, fine-tuning, offline learning, and online learning.
+                In this work, our main focus lies on introducing three settings: pure offline, offline-to-online, and online-to-offline-to-online. In the offline-to-online setting, our framework comprises three stages:
+             1) the supervised learning stage, 2) the multi-step policy improvement stage, and 3) the online fine-tuning stage, as illustrated in the figure below.
+          </p>
+          <p>
+            <span style="color: rgb(128, 185, 90);font-weight: bolder;">Uni-O4</span> employs supervised learning to learn the components for initializing the subsequent phase. In offline multi-step optimization phase (middle),
+            policies query AM-Q to determine whether to update the behavior policies after a certain number of training steps. For instance, AM-Q allows <span>$$\pi^{2}$$</span> to update its behavior policy but rejects the others.
+            Subsequently, one policy is selected as the initialization for online fine-tuning. Specifically,<span>$$OOS_{\mathcal{D}}$$</span> indicates out-of-support of dataset.
+          </p>
+        </div>
+        <div class="columns is-centered">
+          <div class="column is-two-third">
+            <figure class="image">
+              <img src="resources/video/pipeline.PNG" alt="Second Image">
+              <figcaption>Pipeline of offline-to-online setting for <span style="color: rgb(128, 185, 90);font-weight: bolder;">Uni-O4</span></figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
   
 <section class="section">
   <div class="container">
