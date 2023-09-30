@@ -129,14 +129,14 @@
           </p>
           <p>
             <span style="color: rgb(128, 185, 90);font-weight: bolder;">Uni-O4</span> employs supervised learning to learn the components for initializing the subsequent phase. In offline multi-step optimization phase (middle),
-            policies query AM-Q to determine whether to update the behavior policies after a certain number of training steps. For instance, AM-Q allows <span>$$\pi^{2}$$</span> to update its behavior policy but rejects the others.
-            Subsequently, one policy is selected as the initialization for online fine-tuning. Specifically,<span>$$OOS_{\mathcal{D}}$$</span> indicates out-of-support of dataset.
+            policies query AM-Q to determine whether to update the behavior policies after a certain number of training steps. For instance, AM-Q allows $$\pi^{2}$$ to update its behavior policy but rejects the others.
+            Subsequently, one policy is selected as the initialization for online fine-tuning. Specifically, $$OOS_{\mathcal{D}}$$ indicates out-of-support of dataset.
           </p>
         </div>
         <div class="columns is-centered">
           <div class="column is-two-third">
             <figure class="image">
-              <img src="resources/video/pipeline.PNG" alt="Second Image">
+              <img src="resources/video/pipeline.png" alt="Second Image">
               <figcaption>Pipeline of offline-to-online setting for <span style="color: rgb(128, 185, 90);font-weight: bolder;">Uni-O4</span></figcaption>
             </figure>
           </div>
