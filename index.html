@@ -73,6 +73,25 @@
   </div>
 </section>
 
+
+<div class="hr"></div>
+<div>
+		<h2>Motivated Example</h2>
+		<p class="Motivated Example" style="font-size: 1.2em;">
+			The objective of offline-to-online RL algorithms is to strike a trade-off between fine-tuning stability and asymptotical optimality.
+      Challenges arise from the inherent conservatism during the offline stage and the difficulties associated with off-policy evaluation during the offline-to-online stage.
+      To provide a clearer understanding, we track the average values of the <em>V</em> and <em>Q</em> functions during fine-tuning with three different methods. As depicted in the left Figure above,
+      the <em>Q</em> values of the off-policy (SAC) and conservative algorithms exhibit instability and slow improvement, respectively.
+      Hence, we raise the question: <em>Is it possible to avoid introducing the conservatism term during offline training and eliminate the need for off-policy evaluation during offline-to-online fine-tuning?</em> 
+      At the heart of this paper is an <em><strong>on-policy optimization method that unifies both offline and online training without extra regularization</strong></em>, which we term <span style="color: rgb(128, 185, 90);font-weight: bolder;">Uni-O4</span>.
+      <span style="color: rgb(128, 185, 90);font-weight: bolder;">Uni-O4</span> presents steady and rapid improvement in the <em>V</em> values as the fine-tuning performance progresses, emerging as a favorable choice for achieving both stable and efficient fine-tuning.
+    </p>
+	</div>
+  <div class="figure" style="height: 180px; background-image: url(resources/video/motivation_example.pdf);"></div>
+  <div class="figure" style="height: 180px; background-image: url(resources/video/average_value.pdf);"></div>
+<div class="hr"></div>
+
+  
 <section class="section">
   <div class="container">
     <h2 class="title is-2" style="text-align: center;">Real-World Robot Tasks</h2>
