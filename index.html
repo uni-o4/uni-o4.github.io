@@ -147,13 +147,11 @@
   <div class="container">
     <h2 class="title is-2" style="text-align: center;">Real-World Robot Tasks</h2>
     <p>
-      Here, <span style="color: rgb(128, 185, 90);font-weight: bolder;">Uni-O4</span> showcases its ability to excel in real-world robot applications.
-       Our approach introduces a novel process of online pretraining in simulators, followed by offline and online fine-tuning on real-world robots.
-       The difference between this paradigm and the offline-to-online setting introduced above is the behavior policies are directly initialized from the simulator pretraining rather than estimated using BC. In the offline fine-tuning phase,
-        specifically, we deploy the pretrained policy on real-world robots to collect datasets in more challenging environments. As a result of fine-tuning the offline dataset,
-         the policy becomes capable of ruining at a low speed in these demanding environments. Subsequently, we proceed with online fine-tuning to achieve further performance improvement.
-          Overall, offline fine-tuning proves the safety of real-world robot learning,
-           while online learning undergoes policy improvement. This paradigm showcases sample-efficient fine-tuning and safe robot learning. Results are presented in the following videos.
+      Here, <span style="color: rgb(128, 185, 90);font-weight: bolder;">Uni-O4</span> showcases its ability to excel in real-world robot applications. Our approach introduces a novel process of online pretraining in simulators,
+      followed by offline and online fine-tuning on real-world robots. The distinction between this paradigm and the previously introduced offline-to-online setting is that the behavior policies are directly initialized from the simulator pretraining, rather than being estimated using BC.
+      In the offline fine-tuning phase, specifically, we deploy the pretrained policy on real-world robots to collect datasets in more challenging environments. As a result of fine-tuning the offline dataset, the policy becomes capable of ruining at a low speed in these demanding environments.
+      Subsequently, we proceed with online fine-tuning to achieve further performance improvement. Overall, offline fine-tuning proves the safety of real-world robot learning, while online learning undergoes policy improvement. This paradigm showcases sample-efficient fine-tuning and safe robot learning.
+      Results are presented in the following videos.
     </p>
     <br>
       <p style="text-align: center;"><strong>Offline fine-tuned</strong> (0.18 million env steps collected) by <span style="color: rgb(128, 185, 90);font-weight: bolder;">Uni-O4</span> <em>VS.</em> <strong>simulator pretrained</strong> (10 minutes training) policy deployment with low speed <span style="font-size: 14px; text-shadow: 0 0 3px rgb(161, 66, 170);">&darr;</span></p>
